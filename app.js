@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const CONNECTION_URL = process.env.DB;
 const DATABASE_NAME = "tableDB";
 const mongoose = require("mongoose");
