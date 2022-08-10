@@ -1,5 +1,4 @@
-const CONNECTION_URL =
-  "mongodb+srv://rahul:passworddd@cluster0.nttqsn4.mongodb.net/tableDB?retryWrites=true&w=majority";
+const CONNECTION_URL = process.env.DB;
 const DATABASE_NAME = "tableDB";
 const mongoose = require("mongoose");
 const mongoDB = process.env.MONGODB_URI || CONNECTION_URL;
@@ -11,7 +10,7 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 const express = require("express");
 const table = require("./routes/table.route");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 8080;
 const bodyParser = require("body-parser");
 
 app.use(bodyParser.json());
