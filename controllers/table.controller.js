@@ -1,6 +1,6 @@
 const Table = require("../models/table.model");
 
-exports.table_create = function (req, res) {
+exports.table_create = function (req, res, next) {
   let table = new Table({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
