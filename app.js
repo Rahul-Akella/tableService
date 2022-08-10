@@ -9,7 +9,7 @@ const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 const express = require("express");
-const table = require("./routes/table.route"); //imports routes
+const table = require("./routes/table.route");
 const app = express();
 const port = 3000;
 const bodyParser = require("body-parser");
